@@ -1,0 +1,17 @@
+Package: Rcppzhuoer
+Type: Package
+Title: Utility functions for programming with Rcpp
+Version: 0.0.0.9000
+Authors@R: person("Zhuoer", "Dong", email = "dongzhuoer@mail.nankai.edu.cn", 
+    role = c("aut", "cre"))
+Description: refer to https://dongzhuoer.github.io/Rcppzhuoer
+URL: https://dongzhuoer.github.io/Rcppzhuoer, https://github.com/dongzhuoer/Rcppzhuoer
+BugReports: https://github.com/dongzhuoer/Rcppzhuoer/issues
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE, roclets=c('rd', 'collate', 'namespace'))
+Imports:
+    magrittr
+VignetteBuilder: knitr, rmarkdown

@@ -2,3 +2,6 @@
 #' @export
 magrittr::`%>%`
 
+#' @useDynLib Rcppzhuoer
+#' @importFrom Rcpp sourceCpp
+NULL

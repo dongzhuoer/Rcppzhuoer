@@ -13,5 +13,8 @@ LazyData: true
 RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE, roclets=c('rd', 'collate', 'namespace'))
 Imports:
-    magrittr
+    magrittr,
+    Rcpp
 VignetteBuilder: knitr, rmarkdown
+LinkingTo: 
+    Rcpp

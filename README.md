@@ -6,12 +6,6 @@
 
 Utility functions for programming with Rcpp
 
-## initialize
-
-
-
-
-
 
 ## Installation
 

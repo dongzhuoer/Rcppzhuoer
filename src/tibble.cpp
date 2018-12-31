@@ -1,8 +1,11 @@
+// [[Rcpp::plugins(cpp17)]]
 // [[Rcpp::interfaces(r, cpp)]]
+
 #include <Rcpp.h>
 #include "../inst/include/string.hpp"
+
 using namespace Rcpp;
-using namespace Rcppzhuoer;
+using Rcppzhuoer::paste;
 
 // [[Rcpp::export]]
 List as_tibble(List l) {

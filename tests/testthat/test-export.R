@@ -14,7 +14,7 @@ testthat::test_that('tibble()', {
     testthat::skip_if(getOption('testthat_quick'))
     
     testthat::expect_identical(
-        callr::r(function() {Rcpp::evalCpp('Rcppzhuoer::as_tibble(List::create(IntegerVector::create(1, 2, 3)))', depends = 'Rcppzhuoer')}),
-        tibble::tibble(1:3) %>% rlang::set_names(NULL)
+        callr::r(function() {Rcpp::evalCpp('Rcppzhuoer::as_tibble(List::create(Named("x") = IntegerVector::create(1, 2, 3)))', depends = 'Rcppzhuoer')}),
+        tibble::tibble(x = 1:3)
     )
 });

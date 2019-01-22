@@ -1,5 +1,3 @@
-// [[Rcpp::plugins(cpp17)]]
-
 #include <Rcpp.h>
 #include "../inst/include/string.hpp"
 

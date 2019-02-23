@@ -121,27 +121,9 @@
 
     <p>We enable <code>std::boolalpha</code>.</p>
     
-    <h2 class="hasAnchor" id="c-code"><a class="anchor" href="#c-code"></a>C++ code</h2>
-
-    <pre># include &lt;Rcpp.h&gt;
-// [[Rcpp::depends(Rcppzhuoer)]]
-# include &lt;Rcppzhuoer.h&gt;
-using namespace Rcpp;
-    int main() {
-    std::string str = Rcppzhuoer::paste("hello ", 'h', "adle", 'y', " * ", 3.5);
-    Rcout &lt;&lt; str;  // "hello hadley * 3.5"
-    Rcout &lt;&lt; Rcppzhuoer::paste("a true: ", 1, ' ', true);  // "a true: 1 true"
-}
-</pre>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># `std::string` in C++ can be converted to character scalar in R</span>
-<span class='kw pkg'>Rcpp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/Rcpp/topics/evalCpp'>evalCpp</a></span>(<span class='st'>'Rcppzhuoer::paste("hello ", \'h\', "adle", \'y\', " * ", 3.5)'</span>, <span class='kw'>depends</span> <span class='kw'>=</span> <span class='st'>'Rcppzhuoer'</span>)
-<span class='kw pkg'>Rcpp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/Rcpp/topics/evalCpp'>evalCpp</a></span>(<span class='st'>'Rcppzhuoer::paste("a true: ", 1, \' \', true)'</span>, <span class='kw'>depends</span> <span class='kw'>=</span> <span class='st'>'Rcppzhuoer'</span>)
-<span class='co'># }</span><div class='input'>
-
+    <pre class="examples"><div class='input'><span class='kw'>NULL</span></div><div class='output co'>#&gt; NULL</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -149,8 +131,6 @@ using namespace Rcpp;
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#details">Details</a></li>
-
-      <li><a href="#c-code">C++ code</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

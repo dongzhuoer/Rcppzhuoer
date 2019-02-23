@@ -135,27 +135,10 @@
 
     <p>this function only serves as testing purpose, please use <code>as_tibble()</code> in C++</p>
     
-    <h2 class="hasAnchor" id="c-code"><a class="anchor" href="#c-code"></a>C++ code</h2>
-
-    <pre># include &lt;Rcpp.h&gt;
-// [[Rcpp::depends(Rcppzhuoer)]]
-# include &lt;Rcppzhuoer.h&gt;
-using namespace Rcpp;
-    int main() {
-    IntegerVector a = IntegerVector::create(1, 2, 3);
-    CharacterrVector a = CharacterrVector::create("a", "b", "c");
-    List l = List::create(Named("a") = a, Named("b") = b);
-    List tbl = Rcppzhuoer::as_tibble(l);
-}
-</pre>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='co'># `std::string` in C++ can be converted to character scalar in R</span>
-<span class='kw pkg'>Rcpp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/Rcpp/topics/evalCpp'>evalCpp</a></span>(<span class='st'>'Rcppzhuoer::as_tibble(List::create(IntegerVector::create(1, 2, 3)))'</span>, <span class='kw'>depends</span> <span class='kw'>=</span> <span class='st'>'Rcppzhuoer'</span>)
-<span class='kw pkg'>Rcpp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/Rcpp/topics/evalCpp'>evalCpp</a></span>(<span class='st'>'Rcppzhuoer::as_tibble(List::create(CharacterrVector::create("a", "b", "c")))'</span>, <span class='kw'>depends</span> <span class='kw'>=</span> <span class='st'>'Rcppzhuoer'</span>)
-<span class='co'># }</span></pre>
+    <pre class="examples"><div class='input'><span class='kw'>NULL</span></div><div class='output co'>#&gt; NULL</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -165,8 +148,6 @@ using namespace Rcpp;
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
-
-      <li><a href="#c-code">C++ code</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

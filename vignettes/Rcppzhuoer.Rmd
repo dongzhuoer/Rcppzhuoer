@@ -2,7 +2,9 @@
 title: "Introduction to Rcppzhuoer"
 author: "Zhuoer Dong"
 date: "`r Sys.Date()`"
-output: prettydoc::html_pretty
+output: 
+    prettydoc::html_pretty
+        toc: yes
 vignette: >
   %\VignetteIndexEntry{Introduction to Rcppzhuoer}
   %\VignetteEngine{knitr::rmarkdown}
@@ -13,11 +15,56 @@ vignette: >
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
-```{r}
-library(Rcppzhuoer)
+# convert list to tibble
+
+`as_tibble()` converts a _non-empty_ `List` of _equal-length_ elements into a tibble.
+
+```{Rcpp}
+# include <Rcpp.h>
+// [[Rcpp::depends(Rcppzhuoer)]]
+# include <Rcppzhuoer.h>
+using namespace Rcpp;
+
+//[[Rcpp::export]]
+List demo_as_tibble() {
+    // construct a list
+    IntegerVector a = IntegerVector::create(1, 2, 3);
+    CharacterVector b = CharacterVector::create("a", "b", "c");
+    List l = List::create(Named("a") = a, Named("b") = b);
+    
+    return Rcppzhuoer::as_tibble(l);
+}
 ```
 
 ```{r}
-plot(cars)
+demo_as_tibble()
 ```
 
+# paste arguments into a std::string
+
+`paste()` can recieve arbitrary number and types of arguments.
+
+It converts them into strings via `<<` operator, then concatenate into a single `std::string`. 
+
+Besides, We enable `std::boolalpha`. 
+
+
+```{Rcpp}
+# include <Rcpp.h>
+// [[Rcpp::depends(Rcppzhuoer)]]
+# include <Rcppzhuoer.h>
+using namespace Rcpp;
+
+//[[Rcpp::export]]
+void demo_paste() {
+    std::string str = Rcppzhuoer::paste("hello ", 'h', "adle", 'y', " * ", 3.5);
+    Rcout << str << std::endl; 
+    
+    Rcout << Rcppzhuoer::paste("a true: ", 1, ' ', true);
+}
+```
+
+
+```{r}
+demo_paste()
+```

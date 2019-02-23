@@ -3,7 +3,7 @@ title: "Introduction to Rcppzhuoer"
 author: "Zhuoer Dong"
 date: "`r Sys.Date()`"
 output: 
-    prettydoc::html_pretty
+    prettydoc::html_pretty:
         toc: yes
 vignette: >
   %\VignetteIndexEntry{Introduction to Rcppzhuoer}

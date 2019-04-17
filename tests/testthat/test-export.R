@@ -1,5 +1,5 @@
 testthat::context('Testing C++ export')
-if (basename(getwd()) == 'testthat') setwd('../..')  # workspace is reset per file
+setwd(here::here(''))  # workspace is reset per file
 
 testthat::test_that('paste()', {
     testthat::skip_if(getOption('testthat_quick'))

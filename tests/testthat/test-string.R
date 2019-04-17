@@ -1,5 +1,5 @@
 testthat::context('Testing string.cpp')
-if (basename(getwd()) == 'testthat') setwd('../..')  # workspace is reset per file
+setwd(here::here(''))  # workspace is reset per file
 
 testthat::test_that('paste() in c++', {
     testthat::expect_identical(

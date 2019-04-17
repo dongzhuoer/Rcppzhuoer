@@ -1,5 +1,5 @@
 testthat::context('Initialize environment')
-if (basename(getwd()) == 'testthat') setwd('../..')  # workspace is reset per file
+setwd(here::here(''))  # workspace is reset per file
 # refer to http://testthat.r-lib.org/reference/test_dir.html#test-files
 
 options(testthat_quick = F);

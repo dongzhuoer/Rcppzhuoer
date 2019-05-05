@@ -16,7 +16,8 @@ Imports:
     magrittr,
     Rcpp
 Suggests:
-    prettydoc
+    prettydoc,
+    tibble
 VignetteBuilder: knitr, rmarkdown
 LinkingTo: 
     Rcpp

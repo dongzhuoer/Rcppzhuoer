@@ -4,8 +4,8 @@ Title: Utility functions for programming with Rcpp
 Version: 0.0.0.9000
 Authors@R: person("Zhuoer", "Dong", email = "dongzhuoer@mail.nankai.edu.cn", 
     role = c("aut", "cre"))
-Description: refer to https://dongzhuoer.github.io/Rcppzhuoer
-URL: https://dongzhuoer.github.io/Rcppzhuoer, https://github.com/dongzhuoer/Rcppzhuoer
+Description: refer to https://github.com/dongzhuoer/Rcppzhuoer
+URL: https://pkgdown.dongzhuoer.com/dongzhuoer/Rcppzhuoer, https://github.com/dongzhuoer/Rcppzhuoer
 BugReports: https://github.com/dongzhuoer/Rcppzhuoer/issues
 License: file LICENSE
 Encoding: UTF-8
